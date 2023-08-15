@@ -11,8 +11,8 @@ from torch.utils.data import Dataset
 from torch import optim, nn
 import open3d as o3d
 
-cwd = os.getcwd()
-sys.path.append(cwd)
+import sys
+sys.path.insert(0, '/root/rosworkspace/src/mapfusion/overlap')
 from datasets.indoor import IndoorDataset
 from datasets.dataloader import get_dataloader
 from models.architectures import KPFCNN

@@ -6,8 +6,8 @@ Last modified: 30.11.2020
 """
 
 import torch, os, sys, glob
-cwd = os.getcwd()
-sys.path.append(cwd)
+import sys
+sys.path.insert(0, '/root/rosworkspace/src/mapfusion/overlap')
 from tqdm import tqdm
 import numpy as np
 from lib.utils import load_obj, natural_key,setup_seed 

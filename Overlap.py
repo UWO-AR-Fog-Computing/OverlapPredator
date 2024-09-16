@@ -40,12 +40,12 @@ def getpoints():
 
         pcd1 = o3d.geometry.PointCloud()
         pcd1.points = o3d.utility.Vector3dVector(src_pcd)
-        pcd1 = pcd1.voxel_down_sample(0.025)
+        pcd1 = pcd1.voxel_down_sample(0.75)
         src_pcd = np.asarray(pcd1.points)
 
         pcd2 = o3d.geometry.PointCloud()
         pcd2.points = o3d.utility.Vector3dVector(tgt_pcd)
-        pcd2 = pcd2.voxel_down_sample(0.025)
+        pcd2 = pcd2.voxel_down_sample(0.75)
         tgt_pcd = np.asarray(pcd2.points)
 
         print(src_pcd.shape, tgt_pcd.shape)
